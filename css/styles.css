@@ -112,9 +112,8 @@ ul {
   border: 1px solid var(--cornflower-color);
   border-radius: 4px;
   text-decoration: none;
-  transition: background-color var(--main-transition);
-  transition: color var(--main-transition);
-  transition: border var(--main-transition);
+  transition: background-color var(--main-transition),
+    color var(--main-transition), border var(--main-transition);
 }
 .btn:hover,
 .btn:focus {
@@ -277,14 +276,25 @@ ul {
   position: relative;
 }
 
-.contacts-icons,
-.contacts-icon {
+.contacts-icons {
   display: flex;
   gap: 40px;
   margin-left: auto;
 }
 .link.description {
   margin: 0;
+}
+.link.description.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.svg {
+  margin: -0.7px 10px 0 0;
+  fill: #696974;
+}
+.svg.phone {
+  margin: -2px 5px 0 0;
 }
 /* -------------------------FOOTER---------------------------------- */
 .footer-container {
@@ -416,10 +426,6 @@ ul {
   padding: 0 0 120px 0;
 }
 /* -------------------------SVG---------------------------------- */
-.svg {
-  fill: var(--slate-color);
-  margin: 0 -20px 0 0;
-}
 .contacts-icon:hover .svg {
   fill: var(--blue-color);
 }
@@ -589,12 +595,10 @@ ul {
 .form-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  width: 360px;
-  height: 40px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 16px 35px;
+  padding: 8px 45px;
   gap: 10px;
   transition: border var(--main-transition);
 }
@@ -640,8 +644,8 @@ ul {
   height: 16px;
   border-radius: 2px;
   border: 1.25px solid var(--navy-blue);
-  transition: border var(--main-transition);
-  transition: background-color var(--main-transition);
+  transition: border var(--main-transition),
+    background-color var(--main-transition);
 }
 .modal-svg-icon-done {
   fill: transparent;
@@ -669,7 +673,8 @@ ul {
   line-height: 1.33;
   color: #757575;
 }
-.accept label span {
+.accept label a {
+  margin-left: 3px;
   color: var(--blue-color);
 }
 .send {
@@ -685,8 +690,8 @@ ul {
   border-style: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  transition: background-color var(--main-transition);
-  transition: border var(--main-transition);
+  transition: background-color var(--main-transition),
+    border var(--main-transition);
 }
 .send:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
